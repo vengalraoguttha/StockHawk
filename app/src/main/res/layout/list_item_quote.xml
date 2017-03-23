@@ -5,10 +5,10 @@
     android:layout_height="?android:attr/listPreferredItemHeight"
     android:gravity="center_vertical"
     android:orientation="horizontal"
-    android:paddingStart="16dp"
-    android:paddingEnd="16dp"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp">
+    android:paddingStart="@dimen/dim_16"
+    android:paddingEnd="@dimen/dim_16"
+    android:paddingLeft="@dimen/dim_16"
+    android:paddingRight="@dimen/dim_16">
 
     <TextView
         android:id="@+id/symbol"
@@ -29,7 +29,7 @@
             style="@style/BidPriceTextStyle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="10sp"
+            android:layout_marginEnd="@dimen/dim_10"
             tools:text="1000.00" />
 
         <TextView
@@ -38,10 +38,10 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:background="@drawable/percent_change_pill_green"
-            android:paddingStart="3dp"
-            android:paddingEnd="3dp"
-            android:paddingLeft="3dp"
-            android:paddingRight="3dp"
+            android:paddingStart="@dimen/dim_3"
+            android:paddingEnd="@dimen/dim_3"
+            android:paddingLeft="@dimen/dim_3"
+            android:paddingRight="@dimen/dim_3"
             tools:text="100%" />
     </LinearLayout>
 </LinearLayout>

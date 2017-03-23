@@ -90,9 +90,30 @@ public class DetailActivity extends AppCompatActivity implements OnChartValueSel
                 entries.add(new Entry(i,(int)Float.parseFloat(values[1])));
                 String dateString = new SimpleDateFormat("MMM d, ''yy", Locale.ENGLISH).format(new Date(Long.parseLong(values[0])));
                 quarters.add(dateString);
-                Log.v("date",dateString);
             }
-            LineDataSet lineDataSet=new LineDataSet(entries,"Label");
+            SharedPreferences sharedPreferences=PreferenceManager.getDefaultSharedPreferences(this);
+            String type=sharedPreferences.getString(getString(R.string.key_char_setting),getString(R.string.key_week_1));
+            String label;
+            switch (Integer.parseInt(type)){
+                case 2:
+                    label=getString(R.string.val_week_1);
+                    break;
+                case 5:
+                    label=getString(R.string.val_month_1);
+                    break;
+                case 12:
+                    label=getString(R.string.val_month_3);
+                    break;
+                case 24:
+                    label=getString(R.string.val_month_6);
+                    break;
+                case 48:
+                    label=getString(R.string.val_year);
+                    break;
+                default:
+                    label=getString(R.string.val_week_1);
+            }
+            LineDataSet lineDataSet=new LineDataSet(entries,label);
             lineDataSet.setValueTextColor(R.color.colorAccent);
             LineData lineData=new LineData(lineDataSet);
 
@@ -156,9 +177,6 @@ public class DetailActivity extends AppCompatActivity implements OnChartValueSel
 
             history = cursor.getString(Contract.Quote.POSITION_HISTORY).split("\n");
 
-            for(int i=0;i<history.length;i++){
-                Log.v("history",history[i]);
-            }
 
             price.setText(dollarFormat.format(cursor.getFloat(Contract.Quote.POSITION_PRICE)));
             cursor.close();

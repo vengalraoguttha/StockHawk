@@ -6,4 +6,19 @@
         <item>@string/default_stocks_microsoft</item>
         <item>@string/default_stocks_facebook</item>
     </string-array>
+    <array name="val_chart">
+        <item>@string/val_week_1</item>
+        <item>@string/val_month_1</item>
+        <item>@string/val_month_3</item>
+        <item>@string/val_month_6</item>
+        <item>@string/val_year</item>
+    </array>
+
+    <array name="key_chart">
+        <item>@string/key_week_1</item>
+        <item>@string/key_month_1</item>
+        <item>@string/key_month_3</item>
+        <item>@string/key_month_6</item>
+        <item>@string/key_year</item>
+    </array>
 </resources>

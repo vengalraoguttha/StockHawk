@@ -48,7 +48,6 @@ public final class PrefUtils {
             stocks.remove(symbol);
         }
         if(stocks.size()==0){
-            Toast.makeText(context,"No Stock available",Toast.LENGTH_LONG).show();
             return;
         }
         SharedPreferences prefs = PreferenceManager.getDefaultSharedPreferences(context);

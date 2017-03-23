@@ -8,12 +8,10 @@
         android:id="@+id/dialog_stock"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="4dp"
-        android:layout_marginLeft="4dp"
-        android:layout_marginStart="4dp"
-        android:layout_marginEnd="4dp"
-        android:layout_marginRight="4dp"
-        android:layout_marginTop="16dp"
+        android:layout_marginBottom="@dimen/dim_4"
+        android:layout_marginStart="@dimen/dim_4"
+        android:layout_marginEnd="@dimen/dim_4"
+        android:layout_marginTop="@dimen/dim_16"
         android:hint="@string/dialog_hint"
         android:inputType="textCapCharacters" />
 

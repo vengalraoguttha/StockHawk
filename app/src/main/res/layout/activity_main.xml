@@ -28,15 +28,15 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
-        android:layout_margin="16dp"
+        android:layout_margin="@dimen/dim_16"
         android:onClick="button"
         android:src="@drawable/fab_plus"
         android:contentDescription="@string/dialog_title"
         app:backgroundTint="@color/material_blue_500"
-        app:borderWidth="0dp"
-        app:elevation="6dp"
+        app:borderWidth="@dimen/dim_0"
+        app:elevation="@dimen/dim_6"
         app:fabSize="normal"
-        app:pressedTranslationZ="12dp" />
+        app:pressedTranslationZ="@dimen/dim_12" />
 
     <TextView
         android:id="@+id/error"

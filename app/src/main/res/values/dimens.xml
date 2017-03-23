@@ -1,3 +1,15 @@
 <resources>
     <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="dim_25_sp">25sp</dimen>
+    <dimen name="dim_20_sp">20sp</dimen>
+    <dimen name="dim_10">10dp</dimen>
+    <dimen name="dim_16">16dp</dimen>
+    <dimen name="dim_0">0dp</dimen>
+    <dimen name="dim_6">6dp</dimen>
+    <dimen name="dim_12">12dp</dimen>
+    <dimen name="dim_4">4dp</dimen>
+    <dimen name="dim_3">3dp</dimen>
+    <dimen name="dim_8">8dp</dimen>
+    <dimen name="dim_80">80dp</dimen>
+    <dimen name="dim_220">220dp</dimen>
 </resources>

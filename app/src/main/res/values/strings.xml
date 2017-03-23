@@ -3,14 +3,14 @@
 
     <string name="pref_stocks_initialized_key" translatable="false">initialized</string>
 
-    <string name="pref_stocks_key">stocks</string>
+    <string name="pref_stocks_key" translatable="false">stocks</string>
 
 
     <string name="pref_display_mode_key" translatable="false">displayMode</string>
     <string name="pref_display_mode_default">@string/pref_display_mode_percentage_key</string>
 
-    <string name="pref_display_mode_absolute_key">absolute</string>
-    <string name="pref_display_mode_percentage_key">percentage</string>
+    <string name="pref_display_mode_absolute_key" translatable="false">absolute</string>
+    <string name="pref_display_mode_percentage_key" translatable="false">percentage</string>
 
     <string name="default_stocks_yahoo">YHOO</string>
     <string name="default_stocks_apple">AAPL</string>
@@ -21,31 +21,32 @@
     <string name="action_change_units">@string/pref_display_mode_key</string>
 
 
-    <string name="dialog_title">Add Stock</string>
+    <string name="dialog_title" translatable="true">Add Stock</string>
     <string name="dialog_hint">Symbol (e.g. GOOG)</string>
-    <string name="dialog_cancel">Cancel</string>
-    <string name="dialog_add">Add</string>
+    <string name="dialog_cancel" translatable="true">Cancel</string>
+    <string name="dialog_add" translatable="true">Add</string>
 
-    <string name="error_no_network">No network connectivity! Will load stock cursor when the network is available.</string>
-    <string name="error_no_stocks">No stocks added! Hit the floating action button to add one.</string>
+    <string name="error_no_network" translatable="true">No network connectivity! Will load stock cursor when the network is available.</string>
+    <string name="error_no_stocks" translatable="true">No stocks added! Hit the floating action button to add one.</string>
 
-    <string name="toast_stock_added_no_connectivity">Symbol %s added. Will refresh when network available.</string>
-    <string name="toast_no_connectivity">Will refresh when network available.</string>
-    <string name="symbol_format">Company Symbol: <xliff:g id="symbol_format">%1$s</xliff:g></string>
+    <string name="toast_stock_added_no_connectivity" translatable="true">Symbol %s added. Will refresh when network available.</string>
+    <string name="toast_no_connectivity" translatable="true">Will refresh when network available.</string>
+    <string name="symbol_format" translatable="true">Company Symbol: <xliff:g id="symbol_format">%1$s</xliff:g></string>
 
-    <string name="key_week_1">2</string>
-    <string name="key_month_1">5</string>
-    <string name="key_month_3">12</string>
-    <string name="key_month_6">24</string>
-    <string name="key_year">48</string>
+    <string name="key_week_1" translatable="false">2</string>
+    <string name="key_month_1" translatable="false">5</string>
+    <string name="key_month_3" translatable="false">12</string>
+    <string name="key_month_6" translatable="false">24</string>
+    <string name="key_year" translatable="false">48</string>
 
-    <string name="val_week_1">Past One Week</string>
-    <string name="val_month_1">Past One Month</string>
-    <string name="val_month_3">Past Three Months</string>
-    <string name="val_month_6">Past Six Months</string>
-    <string name="val_year">Past Year</string>
+    <string name="val_week_1" translatable="true">Past One Week</string>
+    <string name="val_month_1" translatable="true">Past One Month</string>
+    <string name="val_month_3" translatable="true">Past Three Months</string>
+    <string name="val_month_6" translatable="true">Past Six Months</string>
+    <string name="val_year" translatable="true">Past Year</string>
 
-    <string name="key_char_setting">chart_setting</string>
-    <string name="setting_title">Past Data Setting</string>
+    <string name="key_char_setting" translatable="false">chart_setting</string>
+    <string name="setting_title" translatable="true">Past Data Setting</string>
+    <string name="chart_setting_title" translatable="true">Chart View</string>
 
 </resources>

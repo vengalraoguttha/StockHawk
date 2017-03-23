@@ -103,7 +103,6 @@ public final class QuoteSyncJob {
 
                     quoteCVs.add(quoteCV);
                 }catch (NullPointerException e){
-
                     Intent dataValidIntent = new Intent(QuoteSyncJob.ACTION_DATA_UPDATED).setPackage(context.getPackageName());
                     context.sendBroadcast(dataValidIntent);
                     PrefUtils.removeStock(context,symbol);
@@ -111,7 +110,6 @@ public final class QuoteSyncJob {
                     context.sendBroadcast(noStock);
                     e.printStackTrace();
                 }
-                Log.v("Pro","Camep2");
             }
 
             context.getContentResolver()
@@ -121,9 +119,6 @@ public final class QuoteSyncJob {
 
             Intent dataUpdatedIntent = new Intent(ACTION_DATA_UPDATED).setPackage(context.getPackageName());
             context.sendBroadcast(dataUpdatedIntent);
-            Intent success=new Intent(QuoteSyncJob.ATION_SUCCESS).setPackage(context.getPackageName());
-            context.sendBroadcast(success);
-            Log.v("Widget","Came");
 
         } catch (IOException exception) {
             Timber.e(exception, "Error fetching stock quotes");

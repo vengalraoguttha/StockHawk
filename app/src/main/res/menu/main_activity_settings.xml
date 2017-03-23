@@ -9,7 +9,7 @@
         android:title="@string/action_change_units"
         app:showAsAction="always" />
     <item
-        android:title="Chart View"
+        android:title="@string/chart_setting_title"
         app:showAsAction="never"
         android:orderInCategory="100"
         android:id="@+id/chart_setting_main"
