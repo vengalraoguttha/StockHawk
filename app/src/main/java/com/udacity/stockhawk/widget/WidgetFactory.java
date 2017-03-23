@@ -5,6 +5,7 @@ import android.appwidget.AppWidgetManager;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
+import android.net.Uri;
 import android.os.Build;
 import android.util.Log;
 import android.widget.AdapterView;
@@ -69,24 +70,21 @@ public class WidgetFactory implements RemoteViewsService.RemoteViewsFactory {
             return null;
         }
         RemoteViews views=new RemoteViews(mContext.getPackageName(), R.layout.widget_list_item);
-        Log.v("Widget","entered1");
         if(mCursor.moveToPosition(position)){
-            Log.v("Widget","entered");
             views.setTextViewText(R.id.stock_symbol,mCursor.getString(mCursor.getColumnIndex(Contract.Quote.COLUMN_SYMBOL)));
             views.setTextViewText(R.id.bid_price,mCursor.getString(mCursor.getColumnIndex(Contract.Quote.COLUMN_PRICE)));
             views.setTextViewText(R.id.stock_change,mCursor.getString(mCursor.getColumnIndex(Contract.Quote.COLUMN_PERCENTAGE_CHANGE)));
+
         }
 
         final Intent fillIntent=new Intent();
-        fillIntent.putExtra("SYMBOL",mCursor.getString(mCursor.getColumnIndex(Contract.Quote.COLUMN_SYMBOL)));
+        final Intent fillInIntent = new Intent();
+        Uri stockUri = Contract.Quote.makeUriForStock(mCursor.getString(mCursor.getColumnIndex(Contract.Quote.COLUMN_SYMBOL)));
+        fillInIntent.setData(stockUri);
         views.setOnClickFillInIntent(R.id.stock_widget_list,fillIntent);
         return views;
     }
 
-    @TargetApi(Build.VERSION_CODES.ICE_CREAM_SANDWICH_MR1)
-    private void setRemoteContentDescription(RemoteViews views, String description) {
-        views.setContentDescription(R.id.stock_widget_list, description);
-    }
 
     @Override
     public RemoteViews getLoadingView() {

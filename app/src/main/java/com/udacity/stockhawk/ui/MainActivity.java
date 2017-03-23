@@ -82,6 +82,8 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
                 String symbol = adapter.getSymbolAtPosition(viewHolder.getAdapterPosition());
                 PrefUtils.removeStock(MainActivity.this, symbol);
                 getContentResolver().delete(Contract.Quote.makeUriForStock(symbol), null, null);
+                Intent dataValidIntent = new Intent(QuoteSyncJob.ACTION_DATA_UPDATED).setPackage(getApplicationContext().getPackageName());
+                getApplicationContext().sendBroadcast(dataValidIntent);
             }
         }).attachToRecyclerView(stockRecyclerView);
 
